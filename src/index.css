@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-light: #f8fafc;
+  --color-bg-dark: #0f172a;
+}
+
+/* ✅ Enable class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
