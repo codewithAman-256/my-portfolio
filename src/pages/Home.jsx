@@ -1,61 +1,57 @@
-import React from "react";
-import { delay, motion } from "framer-motion";
+import React,{useRef} from "react";
+import { motion } from "framer-motion";
 
 export default function Home() {
+ 
+
+
   return (
-    <div className="text-center py-16 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white min-h-[80vh] transition">
-      <motion.img
-        src="https://avatars.githubusercontent.com/u/9919?s=200&v=4"
+     <motion.div
+      className="max-w-3xl mx-auto text-center"
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -12 }}
+      transition={{ duration: 0.6 }}
+    >
+      <img
+        src="https://avatars.githubusercontent.com/u/9919?v=4"
         alt="profile"
-        className="mx-auto rounded-full w-40 h-40 mb-6 border-4 border-gray-700"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1 }}
+        className="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-yellow-400"
       />
 
-      <motion.h1
-        className="text-4xl font-bold text-gray-800 dark:text-white mb-2"
-        initial={{ y: -30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-      >
-        Aman Baloch
-      </motion.h1>
-      <motion.p
-        className="text-xl text-gray-600 dark:text-gray-300 mb-4"
-        initial={{ x: -30, opacity: 0.6 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 0.1, duration: 1 }}
-      >
-        Full Stack MERN Developer 💻
-      </motion.p>
-      <motion.p
-        className="max-w-2xl mx-auto text-gray-500"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-        Passionate about building modern web applications with React, Node.js,
-        Express, and MongoDB. Always exploring AI integration and beautiful UI
-        design.
-      </motion.p>
+      <h1 className="text-4xl font-bold mb-2">Hi — I'm Aman</h1>
+      <p className="text-gray-600 dark:text-gray-300 mb-6">
+        MERN Stack Developer. I build responsive web apps with React, Vite, and Tailwind CSS.
+      </p>
 
-      <div
-        className="mt-6 flex justify-center gap-4"
+      <motion.div
+        className="flex gap-3 justify-center mb-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
+        transition={{ delay: 0.6 }}
       >
-        <span className="bg-gray-800 dark:text-gray-800 dark:bg-white text-white px-4 py-2 rounded-lg">
-          React
-        </span>
-        <span className="bg-gray-800 dark:text-gray-800 dark:bg-white bg text-white px-4 py-2 rounded-lg">
-          Node.js
-        </span>
-        <span className="bg-gray-800 text-white dark:text-gray-800 dark:bg-white px-4 py-2 rounded-lg">
-          MongoDB
-        </span>
+        <a
+          href="/resume"
+          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+        >
+          Download Resume
+        </a>
+
+        
+      </motion.div>
+
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
+          <h3 className="font-semibold mb-2">Skills</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300">React, Node.js, Express, MongoDB, Tailwind</p>
+        </div>
+
+        <div className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow">
+          <h3 className="font-semibold mb-2">Current Work</h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300">Building portfolio features + practicing interviews</p>
+        </div>
       </div>
-    </div>
+    </motion.div>
+  
   );
 }

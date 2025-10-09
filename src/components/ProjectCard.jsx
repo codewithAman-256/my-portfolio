@@ -3,7 +3,7 @@ import React from "react";
 export default function ProjectCard({ title, description, link }) {
   return (
     <div
-      className="w-72 bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6 hover:scale-105 transform transition"
+      className="p-5 bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-lg transition transform hover:-translate-y-1"
     >
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-gray-600 dark:text-gray-300">{description}</p>

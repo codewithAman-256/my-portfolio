@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
 
+  const navigate = useNavigate();
+ 
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
@@ -20,16 +22,20 @@ export default function Navbar() {
     localStorage.setItem("theme", newMode ? "dark" : "light");
   };
 
+  const goHome = () => navigate("/");
+
   return (
-    <nav className="flex justify-between items-center p-4 bg-gray-800 dark:bg-gray-900 text-white ">
+    <nav className="flex justify-between items-center p-4 dark:bg-gray-800 bg-gray-900 text-white ">
       <div className="flex gap-6">
+        <button onClick={goHome}>Aman Baloch</button>
         <Link to="/" className="hover:text-yellow-400">Home</Link>
         <Link to="/projects" className="hover:text-yellow-400">Projects</Link>
+        <Link to="/resume" className="hover:text-yellow-400">Resume</Link>
         <Link to="/contact" className="hover:text-yellow-400">Contact</Link>
       </div>
       <button
         onClick={toggleDarkMode}
-        className="bg-gray-700 text-white dark:bg-gray-100 dark:text-black px-3 py-1 rounded-full hover:bg-gray-600"
+        className="bg-gray-700 text-white dark:bg-gray-100 dark:text-black px-3 py-1 ml-4 rounded-full hover:opacity-90 transition"
       >
         {darkMode ? "🔆 Light" : "🌙 Dark"}
       </button>
