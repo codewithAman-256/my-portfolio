@@ -28,7 +28,7 @@ export default function Projects() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.5 }}
-      className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white max-w-5xl max-auto "
+      className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white  max-auto "
     >
       <h2 className="text-3xl font-bold text-center mb-6">My Projects 💻</h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">

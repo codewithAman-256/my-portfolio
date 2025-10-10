@@ -6,7 +6,7 @@ export default function Resume()
     return(
         <motion.div
         
-        className="max-w-3xl max-auto text-center"
+        className=" max-auto text-center"
          initial={{opacity:0,y:10}}
          animate={{opacity:1,y:0}}
          exit={{opacity:0,y:-10}}
@@ -19,14 +19,14 @@ export default function Resume()
             </p>
 
             <div className="flex justify-center gap-4">
-                <a href="/ArshBhai-Resume.pdf"
-                download="ArshBhai-Resume.pdf"
+                <a href="/AmanKhanResume.pdf"
+                download="AmanKhanResume.pdf"
                 className=" px-4 py-2 rounded-full bg-blue-600 text-white"
                 >
                     ⬇️ Download Resume
                 </a>
 
-                <a href="/ArshBhai-Resume.pdf"
+                <a href="/AmanKhanResume.pdf"
                 target="_blank"
                 rel="noreferrer"
                 className="  bg-gray-300 dark:bg-gray-700 px-4 py-2 rounded-full" >

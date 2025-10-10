@@ -8,7 +8,7 @@ export default function Contact() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.5 }}
-      className="text-center max-w-xl max-auto bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white"
+      className="text-center  max-auto bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white"
     >
       <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-300">
         
