@@ -9,12 +9,12 @@ const projects = [
     link: "https://react-news-dashboard-app.netlify.app/",
   },
   {
-    title: "🌦 Weather App",
+    title: "⛅ Weather App",
     description: "Shows live weather using OpenWeather API.",
     link: "https://react-new-weather-app.netlify.app/",
   },
   {
-    title: "👥 Friend List App",
+    title: "👬 Friend List App",
     description:
       "A mini project showing how to add and display friends with useState and conditional UI.",
     link: "https://reactfriendlistapp.netlify.app/",
@@ -28,10 +28,10 @@ export default function Projects() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.5 }}
-      className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white  max-auto "
+      className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white  text-center  space-y-6 sm:space-y-8 "
     >
-      <h2 className="text-3xl font-bold text-center mb-6">My Projects 💻</h2>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">My Projects 💻</h2>
+      <div className="text-base sm:text-lg lg:text-xl leading-relaxed grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((p, i) => (
           <div data-aos="fade-up" key={i}>
             <ProjectCard {...p} />

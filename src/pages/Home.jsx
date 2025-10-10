@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
      <motion.div
-      className="max-w-3xl mx-auto text-center"
+      className="text-center  space-y-6 sm:space-y-8"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -12 }}
@@ -20,8 +20,8 @@ export default function Home() {
         className="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-yellow-400"
       />
 
-      <h1 className="text-4xl font-bold mb-2">Hi — I'm Aman</h1>
-      <p className="text-gray-600 dark:text-gray-300 mb-6">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">Hi — I'm Aman</h1>
+      <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed">
         MERN Stack Developer. I build responsive web apps with React, Vite, and Tailwind CSS.
       </p>
 

@@ -6,15 +6,15 @@ export default function Resume()
     return(
         <motion.div
         
-        className=" max-auto text-center"
+        className=" text-center space-y-6 sm:space-y-8 "
          initial={{opacity:0,y:10}}
          animate={{opacity:1,y:0}}
          exit={{opacity:0,y:-10}}
          transition={{duration:0.5}}
         >
             <h2
-            className=" text-3xl font-bold mb-6">📄 My resume</h2>
-            <p className="text-gray-600 dark: text-gray-300 mb-6">
+            className=" text-3xl sm:text-4xl lg:text-5xl font-bold">📄 My resume</h2>
+            <p className="text-gray-600 dark: text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed">
                 Download my latest resume (PDF).
             </p>
 

@@ -25,8 +25,8 @@ export default function Navbar() {
   const goHome = () => navigate("/");
 
   return (
-    <nav className="flex justify-between items-center p-4 dark:bg-gray-800 bg-gray-900 text-white ">
-      <div className="flex gap-6">
+    <nav className="flex flex-wrap justify-between items-center p-4 dark:bg-gray-800 bg-gray-900 text-white ">
+      <div className="flex flex-wrap gap-4 sm:gap-6 ">
         <button onClick={goHome}>Aman Baloch</button>
         <Link to="/" className="hover:text-yellow-400">Home</Link>
         <Link to="/projects" className="hover:text-yellow-400">Projects</Link>
@@ -35,7 +35,7 @@ export default function Navbar() {
       </div>
       <button
         onClick={toggleDarkMode}
-        className="bg-gray-700 text-white dark:bg-gray-100 dark:text-black px-3 py-1 ml-4 rounded-full hover:opacity-90 transition"
+        className="mt-2 sm:mt-0 px-3 py-1 text-sm sm:text-base bg-gray-700 text-white dark:bg-gray-100 dark:text-black  rounded-full hover:opacity-90 transition"
       >
         {darkMode ? "🔆 Light" : "🌙 Dark"}
       </button>

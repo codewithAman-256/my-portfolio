@@ -16,3 +16,11 @@
 html {
   transition: background-color 0.25s ease, color 0.25s ease;
 }
+
+body{
+  font-family: "Poppins", sans-serif; 
+}
+
+h1,h2,p{
+  font-family: "Space Grotesk", sans-serif;
+}
