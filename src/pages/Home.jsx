@@ -1,5 +1,6 @@
 import React,{useRef} from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Home() {
  
@@ -30,12 +31,12 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
       >
-        <a
-          href="/resume"
+        <Link
+          to="/resume"
           className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
         >
           Download Resume
-        </a>
+        </Link>
 
         
       </motion.div>
