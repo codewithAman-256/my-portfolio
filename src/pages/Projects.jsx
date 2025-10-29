@@ -1,11 +1,14 @@
 import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
     title: "📝 Todo App",
-    description: "Dynamic React Task Manager with dark mode, animations, and progress tracking.",
+    description:
+      "Dynamic React Task Manager with dark mode, animations, and progress tracking.",
     link: "https://todo-pro-app.netlify.app/",
   },
   {
@@ -27,21 +30,35 @@ const projects = [
 ];
 
 export default function Projects() {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true, offset: 100 });
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.5 }}
-      className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white  text-center  space-y-6 sm:space-y-8 "
+      transition={{ duration: 0.6 }}
+      className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white px-4 sm:px-8 lg:px-16 py-12 sm:py-16"
     >
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">My Projects 💻</h2>
-      <div className="text-base sm:text-lg lg:text-xl leading-relaxed grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((p, i) => (
-          <div data-aos="fade-up" key={i}>
-            <ProjectCard {...p} />
-          </div>
-        ))}
+      <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-10">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          My Projects 💻
+        </h2>
+
+        <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto">
+          Explore some of my interactive and fully responsive React projects built with modern
+          tools and APIs.
+        </p>
+
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+          {projects.map((p, i) => (
+            <div data-aos="fade-up" key={i}>
+              <ProjectCard {...p} />
+            </div>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
