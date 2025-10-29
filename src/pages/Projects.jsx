@@ -4,6 +4,11 @@ import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
+    title: "📝 Todo App",
+    description: "A modern, responsive React + Tailwind Task Manager with localStorage persistence, dark mode, progress tracking, and smooth Framer Motion animations.",
+    link: "https://todo-pro-app.netlify.app/",
+  },
+  {
     title: "📰 News Dashboard",
     description: "Fetches live news using News API with React useEffect.",
     link: "https://react-news-dashboard-app.netlify.app/",
