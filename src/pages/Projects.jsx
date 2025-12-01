@@ -6,6 +6,12 @@ import ProjectCard from "../components/ProjectCard";
 
 const projects = [
   {
+    title: "🚀 QuizNova – MERN Quiz Platform",
+    description:
+      "Full-stack AI-powered Quiz & Learning Platform with authentication, admin panel, leaderboard, daily challenges, analytics dashboard, and streak system.",
+    link: "https://quiz-nova-app.vercel.app/",
+  },
+  {
     title: "📝 Todo App",
     description:
       "Dynamic React Task Manager with dark mode, animations, and progress tracking.",
@@ -31,7 +37,7 @@ const projects = [
 
 export default function Projects() {
   useEffect(() => {
-    AOS.init({ duration: 800, once: true, offset: 100 });
+    AOS.init({ duration: 800, once: true, offset: 80 });
   }, []);
 
   return (
@@ -39,26 +45,41 @@ export default function Projects() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.6 }}
-      className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white px-4 sm:px-8 lg:px-16 py-12 sm:py-16"
+      transition={{ duration: 0.5 }}
+      className="text-center space-y-6 sm:space-y-8 "
     >
-      <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-10">
+      <div className="max-w-7xl mx-auto text-center space-y-6 sm:space-y-8 lg:space-y-10">
+        
+        {/* Title */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
           My Projects 💻
         </h2>
 
-        <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto">
-          Explore some of my interactive and fully responsive React projects built with modern
-          tools and APIs.
+        {/* Subtitle */}
+        <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg lg:text-xl max-w-2xl mx-auto leading-relaxed">
+          Explore some of my interactive, optimized, and fully responsive React and MERN stack projects built with modern tools and APIs.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+        {/* Project Grid */}
+        <div
+          className="
+            mt-10 
+            grid 
+            grid-cols-1 
+            sm:grid-cols-2 
+            lg:grid-cols-3 
+            gap-6 
+            sm:gap-8 
+            lg:gap-10
+          "
+        >
           {projects.map((p, i) => (
-            <div data-aos="fade-up" key={i}>
+            <div data-aos="fade-up" key={i} className="h-full">
               <ProjectCard {...p} />
             </div>
           ))}
         </div>
+
       </div>
     </motion.div>
   );
